@@ -1,10 +1,10 @@
 pipeline {
 	    agent any 	
 		environment {
-		PROJECT_ID = 'my first project'
-		CLUSTER_NAME = 'my-first-cluster-1'
-		LOCATION = 'europe-north1-a' 
-		CREDENTIALS_ID = 'kubernetes' 
+		PROJECT_ID = 'clean-mason-262222'
+		CLUSTER_NAME = 'kubeclust'
+		LOCATION = 'europe-west3-c' 
+		CREDENTIALS_ID = 'k8' 
 		}
 		
 	    stages {	
@@ -51,7 +51,7 @@ pipeline {
 			   sh 'pwd'
 			   sh "sed -i 's/tagversion/${env.BUILD_ID}/g' deployment.yaml"
 	                  // step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
-			     step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: 'kubernetes', verifyDeployments: true])
+			     step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: 'k8', verifyDeployments: true])
 				
 			   echo "Deployment Finished ..."
 	            }
