@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: myapp2
+ name: myapp3
  labels:
-  app: myapp2
+  app: myapp3
 spec:
  replicas: 2
  selector:
   matchLabels:
-   app: myapp2
+   app: myapp3
  template:
   metadata:
    labels:
-    app: myapp2
+    app: myapp3
   spec:
    containers:
-   - name: myapp2
+   - name: myapp3
      image: deepudon/my-tomcat-image:tagversion
      ports:
      - containerPort: 8080
@@ -25,11 +25,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp2
+  name: myapp3
 spec:
   type: LoadBalancer
   selector:
-    app: myapp2
+    app: myapp3
   ports:
     - protocol: TCP
       port: 5611
