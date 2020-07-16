@@ -1,10 +1,10 @@
 pipeline {
 	    agent any 	
 		environment {
-		PROJECT_ID = 'deepu-first-project'
-		CLUSTER_NAME = 'kuberclust'
+		PROJECT_ID = 'clean-mason-262222'
+		CLUSTER_NAME = 'k8cluster'
 		LOCATION = 'europe-west3-c' 
-		CREDENTIALS_ID = 'k8cluster' 
+		CREDENTIALS_ID = 'k8deepusvc' 
 		}
 		
 	    stages {	
