@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
    - name: myapp3
-     image: deepudon/my-tomcat-image:tagversion
+     image: deepudon/my-tomcat-image:18
      ports:
      - containerPort: 8080
 
