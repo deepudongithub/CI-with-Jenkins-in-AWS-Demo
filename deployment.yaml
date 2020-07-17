@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
    - name: myapp3
-     image: deepudon/my-tomcat-image
+     image: deepudondocker/my-tomcat-image
      imagePullPolicy: Always
      command: ["echo", "success"]
      ports:
