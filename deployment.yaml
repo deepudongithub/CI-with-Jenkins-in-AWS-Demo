@@ -17,8 +17,7 @@ spec:
   spec:
    containers:
    - name: myapp3
-     image: deepudondocker/my-tomcat-image:tagversion
-     imagePullPolicy: Always
+     image: deepudondocker/kube8s:tagversion
      command: ["echo", "success"]
      ports:
      - containerPort: 8080
