@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
    - name: myapp3
-     image: deepudondocker/kube8s:tagversion
+     image: deepudondocker/kube8s:{{BUILD_NUMBER}}
      command: ["echo", "success"]
      ports:
      - containerPort: 8080
