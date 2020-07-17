@@ -29,7 +29,7 @@ pipeline {
 		   stage('Build Docker Image') { 
 			steps {
 	                   script {
-	                      myapp = docker.build("deepudondocker/my-tomcat-image:${env.BUILD_ID}")
+	                      myapp = docker.build("deepudondocker/kube8s:${env.BUILD_ID}")
 	                   }
 	                }
 		   }
